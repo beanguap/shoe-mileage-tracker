@@ -1,56 +1,53 @@
-/* src/pages/Home/Home.css */
-
-/* Variables for neumorphic look (optional). 
-   You can also store these in a global .css file if you prefer. */
-   :root {
-    --bg-color: #e0e0e0;
-    --shadow-dark: #bebebe;
-    --shadow-light: #ffffff;
-    --border-radius: 12px;
-  }
-  
-  body {
+/* 1) Reset or global styles */
+html, body {
     margin: 0;
     padding: 0;
-    background: var(--bg-color);
+    height: 100%;
+    background: #e0e0e0; /* or var(--bg-color) */
     font-family: sans-serif;
   }
   
-  /* Container for the whole page */
+  /* 2) Home container */
   .home-container {
-    position: relative; /* So the floating button can be positioned easily */
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    background: var(--bg-color);
+    background: #e0e0e0; /* or var(--bg-color) */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 80px; /* give space for bottom nav */
+    padding-bottom: 80px; 
     box-sizing: border-box;
   }
   
-  /* 1) Shoe Circle (top) */
+  /* The big shoe circle */
   .shoe-circle {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background: var(--bg-color);
-    box-shadow: 10px 10px 20px var(--shadow-dark),
-                -10px -10px 20px var(--shadow-light);
+    background: #e0e0e0;
+    box-shadow: 10px 10px 20px #bebebe,
+                -10px -10px 20px #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px; /* spacing from top */
+    margin-top: 40px;
   }
   
-  /* Shoe image */
+  /* Shoe placeholder text or image */
   .shoe-img {
     width: 70%;
     height: auto;
-    object-fit: contain;
   }
   
-  /* 2) Mileage Display & Progress Bar */
+  /* Server message (example) */
+  .server-message {
+    margin: 1rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Mileage info + progress bar */
   .mileage-info {
     text-align: center;
     margin-top: 20px;
@@ -62,71 +59,67 @@
     margin-bottom: 10px;
   }
   
-  /* Outer progress container */
   .mileage-progress {
     width: 220px;
     height: 20px;
     border-radius: 10px;
-    background: var(--bg-color);
-    box-shadow: inset 4px 4px 8px var(--shadow-dark),
-                inset -4px -4px 8px var(--shadow-light);
-    margin: 0 auto; /* center horizontally */
-    overflow: hidden; /* so that .mileage-bar is clipped */
-    position: relative;
+    background: #e0e0e0;
+    box-shadow: inset 4px 4px 8px #bebebe,
+                inset -4px -4px 8px #ffffff;
+    margin: 0 auto;
+    overflow: hidden;
   }
   
-  /* Inner bar that fills based on the percentage */
   .mileage-bar {
     height: 100%;
     background: linear-gradient(145deg, #c8c8c8, #dedede);
     transition: width 0.3s ease;
   }
   
-  /* 3) Floating "+" Button */
+  /* Floating "+" button */
   .add-button {
-    position: absolute; /* float it above everything else */
-    bottom: 90px; /* position above the bottom nav */
+    position: absolute;
+    bottom: 90px;
     right: 50%;
-    transform: translateX(50%); /* center it horizontally */
+    transform: translateX(50%);
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: none;
-    background: var(--bg-color);
+    background: #e0e0e0;
     font-size: 2rem;
     color: #555;
     cursor: pointer;
-    box-shadow: 6px 6px 12px var(--shadow-dark),
-                -6px -6px 12px var(--shadow-light);
+    box-shadow: 6px 6px 12px #bebebe,
+                -6px -6px 12px #ffffff;
   }
   
   .add-button:active {
-    box-shadow: inset 6px 6px 12px var(--shadow-dark),
-                inset -6px -6px 12px var(--shadow-light);
+    box-shadow: inset 6px 6px 12px #bebebe,
+                inset -6px -6px 12px #ffffff;
   }
   
-  /* 4) Bottom Navigation */
+  /* Bottom nav */
   .bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 70px;
-    background: var(--bg-color);
-    box-shadow: 0px -4px 8px var(--shadow-dark);
+    background: #e0e0e0;
+    box-shadow: 0px -4px 8px #bebebe;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
   
-  /* Each nav item (icon) in the bottom bar */
   .nav-item {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--bg-color);
-    box-shadow: 3px 3px 6px var(--shadow-dark),
-                -3px -3px 6px var(--shadow-light);
+    background: #e0e0e0;
+    box-shadow: 3px 3px 6px #bebebe,
+                -3px -3px 6px #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
