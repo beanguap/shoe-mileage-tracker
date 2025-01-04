@@ -1,35 +1,123 @@
 /* src/components/ShoeCard/ShoeCard.css */
-
 .shoe-card {
-    width: 220px;
-    padding: 1rem;
-    border-radius: 12px;
-    background: #e0e0e0;
-    box-shadow: 5px 5px 10px #bebebe,
-                -5px -5px 10px #ffffff;
-    margin: 1rem auto;
-    text-align: center;
+  background: #e0e5ec;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shoe-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.12),
+    -10px -10px 20px rgba(255, 255, 255, 0.9);
+}
+
+.shoe-info {
+  margin-bottom: 15px;
+}
+
+.shoe-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.shoe-brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin: 0;
+}
+
+.shoe-model {
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+.mileage-container {
+  background: #e0e5ec;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 
+    inset 2px 2px 5px rgba(0, 0, 0, 0.05),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.mileage-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #2d3436;
+}
+
+.current-miles {
+  font-weight: 600;
+}
+
+.separator {
+  color: #636e72;
+}
+
+.recommended-miles {
+  color: #636e72;
+}
+
+.unit {
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+.shoe-progress {
+  margin-top: 15px;
+}
+
+/* Image container styles */
+.shoe-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.shoe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Status-based colors */
+.status-good .current-miles {
+  color: #6fd380;
+}
+
+.status-warning .current-miles {
+  color: #d1c46e;
+}
+
+.status-danger .current-miles {
+  color: #e19c9c;
+}
+
+/* Optional: Add responsive design */
+@media (min-width: 768px) {
+  .shoe-card {
+    max-width: 400px;
+    margin: 15px auto;
   }
-  
-  .shoe-brand {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-  
-  .shoe-model {
-    margin: 0.5rem 0;
-    color: #555;
-  }
-  
-  .mileage-text {
-    margin: 0.5rem 0;
-    font-weight: 600;
-  }
-  
-  /* The container holding the ProgressBar */
-  .shoe-progress {
-    margin-top: 0.5rem;
-    width: 100%; 
-    /* We rely on .progress-container to be 100% wide */
-  }
-  
+}
+
+/* Optional: Add pressed state */
+.shoe-card:active {
+  box-shadow: 
+    inset 2px 2px 5px rgba(0, 0, 0, 0.05),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+  transform: translateY(0);
+}

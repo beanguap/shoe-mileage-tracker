@@ -1,18 +1,54 @@
-/* src/components/ProgressBar/ProgressBar.css */
-
+/* ProgressBar.css */
 .progress-container {
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: #e0e0e0;
-    box-shadow: inset 2px 2px 4px #bebebe,
-                inset -2px -2px 4px #ffffff;
-    overflow: hidden; /* so the bar is clipped inside */
-  }
-  
-  .progress-bar {
-    height: 100%;
-    background: linear-gradient(145deg, #c8c8c8, #dedede);
-    transition: width 0.3s ease;
-  }
-  
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.progress-background {
+  width: 100%;
+  height: 20px;
+  background: #e0e5ec;
+  border-radius: 10px;
+  box-shadow: 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+  position: relative;
+  box-shadow: 
+    2px 0 4px rgba(0, 0, 0, 0.1),
+    -2px 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.progress-text {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  line-height: 20px;
+}
+
+/* Optional: Add hover effect */
+.progress-background:hover .progress-bar {
+  filter: brightness(1.05);
+}
+
+/* Optional: Add animation for initial load */
+@keyframes progressFill {
+  from { width: 0; }
+  to { width: var(--target-width); }
+}
+
+.progress-bar {
+  animation: progressFill 1s ease-out forwards;
+  --target-width: var(--width);
+}

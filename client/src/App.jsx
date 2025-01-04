@@ -1,9 +1,13 @@
 // src/App.jsx
-
-import Home from './pages/Home/Home'; // Import the new Home component
+import { BrowserRouter } from 'react-router-dom';
+import Home from './pages/Home/Home';
 
 function App() {
-  return <Home />;
+  return (
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>
+  );
 }
 
 export default App;
