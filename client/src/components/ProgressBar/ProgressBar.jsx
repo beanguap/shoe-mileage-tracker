@@ -2,16 +2,20 @@
 import React from 'react';
 import './ProgressBar.css';
 
+// In ProgressBar.jsx
 function ProgressBar({ value, maxValue }) {
   const percentage = maxValue ? (value / maxValue) * 100 : 0;
   
-  // Color gradients for different percentage ranges
-  let barColor = 'linear-gradient(145deg, #6fd380, #76e18c)'; // default green
-  if (percentage >= 80) {
-    barColor = 'linear-gradient(145deg, #e19c9c, #e6abab)'; // red-ish
-  } else if (percentage >= 50) {
-    barColor = 'linear-gradient(145deg, #d1c46e, #e9df82)'; // yellow-ish
-  }
+  // Create gradient based on percentage
+  const getBarColor = (percent) => {
+    if (percent >= 80) {
+      return 'linear-gradient(145deg, #e19c9c, #e6abab)'; // red gradient
+    } else if (percent >= 50) {
+      return 'linear-gradient(145deg, #d1c46e, #e9df82)'; // yellow gradient
+    } else {
+      return 'linear-gradient(145deg, #6fd380, #76e18c)'; // green gradient
+    }
+  };
 
   return (
     <div className="progress-container">
@@ -20,7 +24,7 @@ function ProgressBar({ value, maxValue }) {
           className="progress-bar"
           style={{
             width: `${percentage}%`,
-            background: barColor
+            background: getBarColor(percentage)
           }}
         >
           <span className="progress-text">{Math.round(percentage)}%</span>

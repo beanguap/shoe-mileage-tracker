@@ -1,25 +1,31 @@
 .run-card {
-    width: 260px;
-    padding: 1rem;
-    margin: 1rem auto;
-    border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow: 5px 5px 10px #bebebe,
-                -5px -5px 10px #ffffff;
-    text-align: center;
-  }
-  
-  .run-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-  
-  .run-date,
-  .run-distance,
-  .run-shoe {
-    margin: 0;
-    font-weight: 500;
-    color: #555;
-  }
-  
+  padding: 15px;
+  border-radius: 15px;
+  background: #e0e0e0;
+  box-shadow: 
+    inset 5px 5px 10px #bebebe,
+    inset -5px -5px 10px #ffffff;
+  width: 260px;
+  margin: 15px auto;
+}
+
+.run-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.run-date {
+  font-weight: 500;
+  color: #2d3436;
+}
+
+.run-distance {
+  color: #636e72;
+}
+
+.run-steps {
+  font-size: 0.9rem;
+  color: #636e72;
+}

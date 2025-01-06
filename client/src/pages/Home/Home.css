@@ -7,6 +7,17 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-bottom: 150px; /* Add padding for bottom nav and add button */
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 /* Neumorphic circle container */
@@ -82,14 +93,97 @@
 .mileage-info {
   width: 280px;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 24rem;
+  margin-bottom: 10px;
 }
 
 .mileage-text {
   font-size: 1.2rem;
   color: #2d3436;
   margin-bottom: 10px;
+}
+
+.mileage-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.mileage-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 
+    inset 3px 3px 6px #bebebe,
+    inset -3px -3px 6px #ffffff;
+}
+
+.stat-label {
+  color: #636e72;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: #2d3436;
+  font-weight: 500;
+}
+
+/* Run history section */
+.run-history {
+  width: 280px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: 
+    8px 8px 16px #bebebe,
+    -8px -8px 16px #ffffff;
+}
+
+.run-history-title {
+  font-size: 1.2rem;
+  color: #2d3436;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.run-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.run-item {
+  padding: 15px;
+  border-radius: 15px;
+  background: #e0e0e0;
+  box-shadow: 
+    inset 5px 5px 10px #bebebe,
+    inset -5px -5px 10px #ffffff;
+}
+
+.run-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.run-date {
+  font-weight: 500;
+  color: #2d3436;
+}
+
+.run-distance {
+  color: #636e72;
+}
+
+.run-steps {
+  font-size: 0.9rem;
+  color: #636e72;
 }
 
 /* Add button */
