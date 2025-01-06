@@ -7,7 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px auto;
+  margin-bottom: 150px;
+  margin: 20px a;
   box-shadow: 
     inset 8px 8px 16px #bebebe,
     inset -8px -8px 16px #ffffff,
@@ -57,7 +58,7 @@
 
 .add-button {
   position: fixed;
-  bottom: 90px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
