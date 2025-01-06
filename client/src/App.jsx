@@ -1,11 +1,15 @@
 // src/App.jsx
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
+import Upcoming from './pages/Upcoming/Upcoming';
 
 function App() {
   return (
     <BrowserRouter>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/upcoming" element={<Upcoming />} />
+      </Routes>
     </BrowserRouter>
   );
 }

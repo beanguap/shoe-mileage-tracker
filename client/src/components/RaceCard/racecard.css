@@ -1,0 +1,66 @@
+.race-card {
+    padding: 20px;
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow: 
+      5px 5px 10px #bebebe,
+      -5px -5px 10px #ffffff;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure equal spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .race-card:hover {
+    transform: translateY(2px);
+    box-shadow: 
+      inset 5px 5px 10px #bebebe,
+      inset -5px -5px 10px #ffffff;
+  }
+  
+  .race-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 
+      3px 3px 6px rgba(0, 0, 0, 0.1),
+      -3px -3px 6px rgba(255, 255, 255, 0.8);
+  }
+  
+  .race-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Allow details to take up remaining space */
+  }
+  
+  .race-organizer {
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+  }
+  
+  .race-location,
+  .race-distance,
+  .race-date {
+    color: #636e72;
+    margin: 2px 0;
+    font-size: 0.9rem;
+  }
+  
+  .race-location {
+    font-weight: 500;
+  }
+  
+  .race-distance {
+    font-weight: 500;
+  }
+  
+  .race-date {
+    font-weight: 400;
+  }
