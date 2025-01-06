@@ -1,13 +1,12 @@
 // src/components/ShoeCard/ShoeCard.jsx
 import React from 'react';
 import './ShoeCard.css';
-import nikeImage from '../../imgs/NIKE3.jpg'; // Import the image
+import nikeImage from '../../imgs/NIKE3.jpg';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 function ShoeCard({ brand, model, currentMiles, recommendedMiles }) {
-  // Calculate percentage for color indication
   const percentage = (currentMiles / recommendedMiles) * 100;
   
-  // Determine status class based on percentage
   let statusClass = 'status-good';
   if (percentage >= 80) {
     statusClass = 'status-warning';
@@ -34,6 +33,10 @@ function ShoeCard({ brand, model, currentMiles, recommendedMiles }) {
             <span className="recommended-miles">{recommendedMiles}</span>
             <span className="unit">miles</span>
           </div>
+          <ProgressBar 
+            value={currentMiles} 
+            maxValue={recommendedMiles} 
+          />
         </div>
       </div>
     </div>

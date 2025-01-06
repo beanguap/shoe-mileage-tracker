@@ -68,22 +68,18 @@ function Home() {
       </div>
   
       <div className="mileage-info">
-  <p className="mileage-text">Shoe Health</p>
-  <div className="mileage-stats">
-    <div className="mileage-stat">
-      <span className="stat-label">Current Mileage</span>
-      <span className="stat-value">{currentShoe?.currentMiles || 0} miles</span>
-    </div>
-    <div className="mileage-stat">
-      <span className="stat-label">Recommended Replacement</span>
-      <span className="stat-value">{currentShoe?.recommendedMiles || 0} miles</span>
-    </div>
-  </div>
-  <ProgressBar 
-    value={currentShoe?.currentMiles || 0} 
-    maxValue={currentShoe?.recommendedMiles || 0} 
-  />
-</div>
+        <p className="mileage-text">Weekly Stats</p>
+        <div className="mileage-stats">
+          <div className="mileage-stat">
+            <span className="stat-label">Weekly Mileage</span>
+            <span className="stat-value">18.5 miles</span>
+          </div>
+          <div className="mileage-stat">
+            <span className="stat-label">Weekly Goal</span>
+            <span className="stat-value">25 miles</span>
+          </div>
+        </div>
+      </div>
   
       <div className="run-history">
         <h3 className="run-history-title">Recent Runs</h3>
