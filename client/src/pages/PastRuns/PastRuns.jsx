@@ -1,7 +1,6 @@
-// src/pages/PastRuns/PastRuns.jsx
 import React, { useState } from 'react';
 import './PastRuns.css';
-import RunCard from '../../components/RunCard/RunCard';
+import PastRunCard from '../../components/PastRunCard/PastRunCard';
 import BottomNav from '../../components/BottomNav/BottomNav';
 
 const mockRuns = [
@@ -69,7 +68,7 @@ function PastRuns() {
       </div>
       <div className="run-list">
         {filteredRuns.map(run => (
-          <RunCard key={run.id} {...run} onClick={() => handleRunClick(run)} />
+          <PastRunCard key={run.id} {...run} onClick={() => handleRunClick(run)} />
         ))}
       </div>
       {selectedRun && (
