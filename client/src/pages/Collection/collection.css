@@ -12,6 +12,12 @@
     padding-bottom: 150px; /* Add padding for bottom nav and add button */
     padding-left: 20px; /* Add padding for consistent spacing */
     padding-right: 20px; /* Add padding for consistent spacing */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .collection-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
   }
   
   .collection-title {
@@ -29,6 +35,39 @@
     font-size: 1.5rem;
     color: #2d3436;
     margin-bottom: 10px;
+  }
+  
+  .shoe-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .add-shoe-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Match the size of ShoeCard */
+    height: 120px; /* Match the size of ShoeCard */
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow: 
+      5px 5px 10px #bebebe,
+      -5px -5px 10px #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .add-shoe-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      inset 5px 5px 10px #bebebe,
+      inset -5px -5px 10px #ffffff;
+  }
+  
+  .plus-sign {
+    font-size: 2rem;
+    color: #2d3436;
   }
   
   .wishlist-container {
@@ -95,6 +134,20 @@
     .wishlist-title {
       font-size: 1.2rem;
       margin-bottom: 10px;
+    }
+  
+    .shoe-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .add-shoe-box {
+      width: 100%; /* Match the size of ShoeCard */
+      height: auto; /* Match the size of ShoeCard */
+    }
+  
+    .plus-sign {
+      font-size: 1.5rem;
     }
   
     .wishlist-item {

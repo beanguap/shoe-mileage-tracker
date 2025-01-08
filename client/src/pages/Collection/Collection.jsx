@@ -14,7 +14,7 @@ const mockShoes = {
   },
   easy: {
     brand: 'Asics',
-    model: 'Gel-Nimbus 23',
+    model: 'Novablast 3',
     currentMiles: 200,
     recommendedMiles: 400,
     image: '/logos/Asics.png'
@@ -48,17 +48,32 @@ function Collection() {
       
       <div className="shoe-category">
         <h3 className="category-title">Tempo</h3>
-        <ShoeCard {...mockShoes.tempo} />
+        <div className="shoe-row">
+          <ShoeCard {...mockShoes.tempo} />
+          <div className="add-shoe-box" onClick={() => console.log('Add new shoe clicked')}>
+            <span className="plus-sign">+</span>
+          </div>
+        </div>
       </div>
 
       <div className="shoe-category">
         <h3 className="category-title">Easy/Recovery</h3>
-        <ShoeCard {...mockShoes.easy} />
+        <div className="shoe-row">
+          <ShoeCard {...mockShoes.easy} />
+          <div className="add-shoe-box" onClick={() => console.log('Add new shoe clicked')}>
+            <span className="plus-sign">+</span>
+          </div>
+        </div>
       </div>
 
       <div className="shoe-category">
         <h3 className="category-title">Daily</h3>
-        <ShoeCard {...mockShoes.daily} />
+        <div className="shoe-row">
+          <ShoeCard {...mockShoes.daily} />
+          <div className="add-shoe-box" onClick={() => console.log('Add new shoe clicked')}>
+            <span className="plus-sign">+</span>
+          </div>
+        </div>
       </div>
 
       <div className="wishlist-container">

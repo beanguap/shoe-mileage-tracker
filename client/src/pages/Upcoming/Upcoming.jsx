@@ -1,5 +1,5 @@
 // src/pages/Upcoming/Upcoming.jsx
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import './Upcoming.css';
 import RaceCard from '../../components/RaceCard/RaceCard';
 import BottomNav from '../../components/BottomNav/BottomNav';
@@ -59,6 +59,13 @@ function Upcoming() {
           <RaceCard key={race.id} {...race} />
         ))}
       </div>
+      <button 
+        className="add-race-button" 
+        aria-label="Add new race"
+        onClick={() => console.log('Add new race clicked')}
+      >
+        +
+      </button>
       <BottomNav />
     </div>
   );
