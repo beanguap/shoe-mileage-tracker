@@ -1,9 +1,10 @@
 // src/components/ShoeCard/ShoeCard.jsx
 import React from 'react';
 import './ShoeCard.css';
+import nikeImage from '../../imgs/NIKE3.jpg';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
-function ShoeCard({ brand, model, currentMiles, recommendedMiles, image }) {
+function ShoeCard({ brand, model, currentMiles, recommendedMiles }) {
   const percentage = (currentMiles / recommendedMiles) * 100;
   
   let statusClass = 'status-good';
@@ -15,8 +16,8 @@ function ShoeCard({ brand, model, currentMiles, recommendedMiles, image }) {
 
   return (
     <div className={`shoe-card ${statusClass}`}>
-      <div className="shoe-image-container">
-        <img src={image} alt={`${brand} ${model}`} className="shoe-image" />
+      <div className="shoe-image-container"> 
+        <img src={nikeImage} alt={`${brand} ${model}`} className="shoe-image" />
       </div>
 
       <div className="shoe-info">

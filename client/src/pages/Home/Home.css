@@ -21,14 +21,15 @@
 }
 
 /* Neumorphic circle container */
+/* Ensure the parent container is set up correctly */
 .shoe-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 280px;
   height: 280px;
   border-radius: 50%;
   background: #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto 20px;
   box-shadow: 
     inset 8px 8px 16px #bebebe,
@@ -39,7 +40,6 @@
   position: relative;
 }
 
-/* ShoeCard styles within circle */
 .shoe-circle .shoe-card {
   width: 100%;
   height: 100%;
