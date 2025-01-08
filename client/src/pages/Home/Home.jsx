@@ -63,6 +63,7 @@ function Home() {
             model={currentShoe.model}
             currentMiles={currentShoe.currentMiles}
             recommendedMiles={currentShoe.recommendedMiles}
+            image="/src/imgs/NIKE3.jpg" // Updated path for the correct shoe image
           />
         )}
       </div>
