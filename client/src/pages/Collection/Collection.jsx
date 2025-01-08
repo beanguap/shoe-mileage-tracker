@@ -10,21 +10,21 @@ const mockShoes = {
     model: 'ZoomX Vaporfly Next%',
     currentMiles: 150,
     recommendedMiles: 300,
-    image: '/logos/Nike.png'
+    image: '/shoes/nike.png' // Updated path for Tempo shoe
   },
   easy: {
     brand: 'Asics',
     model: 'Novablast 3',
     currentMiles: 200,
     recommendedMiles: 400,
-    image: '/logos/Asics.png'
+    image: '/shoes/Asics.png' // Updated path for Easy shoe
   },
   daily: {
     brand: 'Adidas',
     model: 'Ultraboost 21',
     currentMiles: 100,
     recommendedMiles: 500,
-    image: '/logos/Adidas.png'
+    image: '/shoes/adidas.jpg' // Updated path for Daily shoe
   }
 };
 
