@@ -31,7 +31,7 @@ function Home() {
       try {
         setIsLoading(true);
         setError(null);
-        const response = await axios.get('http://localhost:3001/api/shoes');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/shoes`);
         if (response.data.length > 0) {
           setCurrentShoe(response.data[0]);
         }
